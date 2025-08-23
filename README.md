@@ -21,5 +21,7 @@ O objetivo é facilitar o dia a dia dos profissionais da saúde e aumentar a efi
 - [MySQL](https://www.mysql.com/) >= 8  
 - [Git](https://git-scm.com/)  
 
-### Passos
 
+
+TCC ETEC GRUPO 05 <br />
+© Todos os direitos reservados

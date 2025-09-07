@@ -11,15 +11,27 @@
 
   <!-- Navbar -->
   <header>
-    <h1>SISMED</h1>
-    <nav>
+    <img class="logo" src="Imagem/Sismed-logo.png" />
+    <nav class="desktop-nav">
       <a href="#">Início</a>
       <a href="#">Pacientes</a>
       <a href="#">Consultas</a>
       <a href="#">Relatórios</a>
       <a href="#">Configurações</a>
     </nav>
-    <a href="#" class="logout">Sair</a>
+    <!-- imagem hamburger -->
+    <img class="imagem-ham" src="Imagem/icon-hamburger.png" />
+    
+    <!-- Barra de navegação do mobile -->
+    <nav class="nav-mobile">
+      <a href="https://google.com">Início</a>
+      <a href="https://google.com">Pacientes</a>
+      <a href="https://google.com">Consultas</a>
+      <a href="https://google.com">Relatórios</a>
+      <a href="https://google.com">Configurações</a>
+    </nav>
+
+    <a href="index.php" class="logout">Sair</a>
   </header>
 
   <!-- Conteúdo -->
@@ -80,6 +92,21 @@
     </table>
 
   </div>
+
+  <script src="JS/jquery.js"></script>
+ <script>
+
+// Usado para garantir que o evento será registrado depois da pagina(DOM) ser carregado
+
+
+  $(".imagem-ham").click(function() {
+    
+    $(".nav-mobile").slideToggle();
+  });
+
+
+
+ </script>
 
 </body>
 </html>

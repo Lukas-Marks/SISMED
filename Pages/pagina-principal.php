@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="CSS/Pagina-Principal.css"/>
+  <link rel="stylesheet" href="../CSS/Pagina-Principal.css"/>
   <title>SISMED - Dashboard</title>
 
 </head>
@@ -11,7 +11,7 @@
 
   <!-- Navbar -->
   <header>
-    <img class="logo" src="Imagem/Sismed-logo.png" />
+    <img class="logo" src="../Imagem/Sismed-logo.png" />
     <nav class="desktop-nav">
       <a href="#">Início</a>
       <a href="#">Pacientes</a>
@@ -20,7 +20,7 @@
       <a href="#">Configurações</a>
     </nav>
     <!-- imagem hamburger -->
-    <img class="imagem-ham" src="Imagem/icon-hamburger.png" />
+    <img class="imagem-ham" src="../Imagem/icon-hamburger.png" />
     
     <!-- Barra de navegação do mobile -->
     <nav class="nav-mobile">
@@ -31,7 +31,7 @@
       <a href="https://google.com">Configurações</a>
     </nav>
 
-    <a href="index.php" class="logout">Sair</a>
+    <a href="../index.php" class="logout">Sair</a>
   </header>
 
   <!-- Conteúdo -->
@@ -93,7 +93,7 @@
 
   </div>
 
-  <script src="JS/jquery.js"></script>
+  <script src="../JS/jquery.js"></script>
  <script>
 
 // Usado para garantir que o evento será registrado depois da pagina(DOM) ser carregado

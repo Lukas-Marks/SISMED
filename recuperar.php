@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Recuperar Senha - SISMED</title>
-    <link rel="stylesheet" href="css/style.css?v=2">
+    <link rel="stylesheet" href="css/login.css?v=2">
 </head>
 <body>
     <div class="recuperar-container">

@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>SISMED - Login</title>
-    <link rel="stylesheet" href="css/style.css?v=1">
+    <link rel="stylesheet" href="css/login.css?v=1">
 </head>
 <body>
     <div class="login-container">
         <h1 class="logo">SISMED</h1>
         <p class="subtitle">Sistema para Consultórios</p>
 
-        <form method="POST" action="autenticar.php">
+        <form method="POST" action="Pages/pagina-principal.php">
             <input type="text" name="email" placeholder="Usuário / Email" required>
             <input type="password" name="senha" placeholder="Senha" required>
 

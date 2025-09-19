@@ -12,19 +12,20 @@
     .header {
       background: #1976d2;
       color: white;
-      padding: 15px 25px;
-      font-size: 22px;
+      padding: 15px 20px;
       font-weight: bold;
+      font-size: 20px;
+      position: relative;
     }
     .nav {
       position: absolute;
-      right: 30px;
+      right: 20px;
       top: 15px;
     }
     .nav a {
       color: white;
       text-decoration: none;
-      margin-left: 20px;
+      margin-left: 15px;
       font-weight: 500;
     }
     .nav a:hover {
@@ -38,19 +39,27 @@
     }
     .card {
       background: white;
-      padding: 30px;
       border-radius: 8px;
+      padding: 20px 25px;
+      width: 360px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      width: 350px;
       text-align: center;
     }
     h2 {
       margin-top: 0;
+      font-size: 22px;
+    }
+    label {
+      font-size: 14px;
+      font-weight: bold;
+      display: block;
+      text-align: left;
+      margin-top: 10px;
     }
     input {
-      width: 100%;
-      padding: 10px;
-      margin-top: 10px;
+      width: 95%;
+      padding: 8px;
+      margin-top: 5px;
       border: 1px solid #ccc;
       border-radius: 4px;
       font-size: 14px;
@@ -60,7 +69,7 @@
       color: white;
       border: none;
       padding: 10px;
-      margin-top: 15px;
+      margin-top: 20px;
       width: 100%;
       font-size: 16px;
       border-radius: 4px;
@@ -69,13 +78,23 @@
     .btn:hover {
       background: #125a9e;
     }
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 10px;
+      color: #1976d2;
+      text-decoration: none;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
   <div class="header">
     SISMED
     <div class="nav">
-      <a href="#">Início</a>
+      <a href="index.html">Início</a>
       <a href="#">Pacientes</a>
       <a href="#">Consultas</a>
     </div>
@@ -84,20 +103,21 @@
   <div class="container">
     <div class="card">
       <h2>Editar Paciente</h2>
+
       <label for="matricula">ID ou matrícula:</label>
-      <input type="text" id="matricula" placeholder="Digite o ID ou matrícula">
+      <input type="text" id="matricula">
       <button class="btn" onclick="buscarPaciente()">Buscar</button>
-    </div>
+     </div>
   </div>
 
   <script>
     function buscarPaciente() {
-      const id = document.getElementById('matricula').value;
-      if(id.trim() === '') {
-        alert('Digite um ID ou matrícula para buscar.');
-      } else {
-        alert('Buscando paciente com ID/matrícula: ' + id);
+      const id = document.getElementById('matricula').value.trim();
+      if (!id) {
+        alert("Digite um ID ou matrícula para buscar.");
+        return;
       }
+      alert("Buscando paciente com ID/matrícula: " + id);
     }
   </script>
 </body>

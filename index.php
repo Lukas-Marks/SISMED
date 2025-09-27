@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <title>SISMED - Login</title>
     <link rel="stylesheet" href="css/login.css?v=1">
+
 </head>
 <body>
     <div class="login-container">
-        <h1 class="logo">SISMED</h1>
-        <p class="subtitle">Sistema para Consultórios</p>
+        <img src="/Imagem/Sismed-logo.png" alt="Logo do Sistema" class="logo-image">
+        <p class="subtitle">Sistema para Consultórios Médicos</p>
 
         <form method="POST" action="Pages/pagina-principal.php">
             <input type="text" name="email" placeholder="Usuário / Email" required>
@@ -16,7 +17,7 @@
 
             <div class="options">
                 <label><input type="checkbox" name="lembrar"> Lembrar-me</label>
-                <a href="recuperar.php" class="link">Esqueci a senha</a>
+                <a href="../Pages/recuperar.php" class="link">Esqueci a senha</a>
             </div>
 
             <button type="submit" class="btn-primary">Entrar</button>

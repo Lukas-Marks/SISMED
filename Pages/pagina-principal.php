@@ -3,43 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../CSS/Pagina-Principal.css"/>
-  <title>SISMED - Dashboard</title>
+    <!-- CSS Padrão das paginas -->
+  <link rel="stylesheet" href="../CSS/mediaquerie.css"/>
+  <link rel="stylesheet" href="../CSS/rodape.css"/>
+  <link rel="stylesheet" href="../CSS/cabecalho.css"/>
+  <link rel="stylesheet" href="../CSS/reset.css"/>
 
+  <link rel="stylesheet" href="../CSS/Pagina-Principal.css"/>
+
+
+
+
+
+  <title>SISMED - Dashboard</title>
 </head>
 <body>
 
-  <!-- Navbar -->
-  <header>
-    <img class="logo" src="../Imagem/Sismed-logo.png" />
-    <nav class="desktop-nav">
-      <a href="#">Início</a>
-      <a href="#">Pacientes</a>
-      <a href="#">Consultas</a>
-      <a href="#">Relatórios</a>
-      <a href="#">Configurações</a>
-    </nav>
-    <!-- imagem hamburger -->
-    <img class="imagem-ham" src="../Imagem/icon-hamburger.png" />
-    
-    <!-- Barra de navegação do mobile -->
-    <nav class="nav-mobile">
-      <a href="https://google.com">Início</a>
-      <a href="https://google.com">Pacientes</a>
-      <a href="https://google.com">Consultas</a>
-      <a href="https://google.com">Relatórios</a>
-      <a href="https://google.com">Configurações</a>
-    </nav>
-
-    <a href="../index.php" class="logout">Sair</a>
-  </header>
+  <!-- Navbar e Cabeçalho -->
+  <?php include 'cabecalho.php'; ?> 
 
   <!-- Conteúdo -->
   <div class="container">
 
     <!-- Boas-vindas -->
     <div class="welcome">
-      <h2>Bem-vindo(a), Dr(a). Silva 👩‍⚕️</h2>
+      <h2>Bem-vindo(a), {  Dr(a). Silva } 👩‍⚕️</h2>
       <p>Aqui esta um resumo do consultório para hoje.</p>
     </div>
 
@@ -93,12 +81,11 @@
 
   </div>
 
-  <script src="../JS/jquery.js"></script>
- <script>
-
-// Usado para garantir que o evento será registrado depois da pagina(DOM) ser carregado
+  <?php include 'rodape.php'; ?> 
 
 
+<script src="../JS/jquery.js"></script>
+<script> // Usado para garantir que o evento será registrado depois da pagina(DOM) ser carregado
   $(".imagem-ham").click(function() {
     
     $(".nav-mobile").slideToggle();
@@ -106,7 +93,7 @@
 
 
 
- </script>
+</script>
 
 </body>
 </html>

@@ -3,17 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <title>SISMED - Editar Paciente</title>
+
+      <!-- CSS Padrão das paginas -->
+  <link rel="stylesheet" href="../CSS/mediaquerie.css"/>
+  <link rel="stylesheet" href="../CSS/rodape.css"/>
+  <link rel="stylesheet" href="../CSS/cabecalho.css"/>
+  <link rel="stylesheet" href="../CSS/reset.css"/>
+
   <link rel="stylesheet" href="../CSS/editar_cadastro.css" />
 </head>
 <body>
-  <div class="header">
-    SISMED
-    <div class="nav">
-      <a href="index.html">Início</a>
-      <a href="#">Pacientes</a>
-      <a href="#">Consultas</a>
-    </div>
-  </div>
+
+<?php include 'cabecalho.php'; ?> 
 
   <div class="container">
     <div class="card">
@@ -25,6 +26,8 @@
      </div>
   </div>
 
+  <?php include 'rodape.php'; ?> 
+
   <script>
     function buscarPaciente() {
       const id = document.getElementById('matricula').value.trim();
@@ -35,5 +38,7 @@
       alert("Buscando paciente com ID/matrícula: " + id);
     }
   </script>
+
+  
 </body>
 </html>

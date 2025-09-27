@@ -12,7 +12,7 @@ body {
 /* ----- Caixa de login ----- */
 .login-container {
     background: #fff;
-    padding: 30px;
+    padding: 50px;
     border-radius: 12px;
     width: 350px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
@@ -140,4 +140,12 @@ footer {
     margin-top: 15px;
     font-size: 14px;
     color: green;
+}
+
+.logo-image{
+    width: 200px;
+    height: 200px;
+    filter: invert(1);
+    cursor: pointer;
+    scale: 1.5;
 }

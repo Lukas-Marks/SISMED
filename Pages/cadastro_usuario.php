@@ -4,13 +4,21 @@
   <meta charset="utf-8" />
   <title>SISMED - Cadastrar Usuário</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <!-- CSS Padrão das paginas -->
+  <link rel="stylesheet" href="../CSS/mediaquerie.css"/>
+  <link rel="stylesheet" href="../CSS/rodape.css"/>
+  <link rel="stylesheet" href="../CSS/cabecalho.css"/>
+  <link rel="stylesheet" href="../CSS/reset.css"/>
+
   <link rel="stylesheet" href="../CSS/cadastro_usuario.css" />
   <style>
     
   </style>
 </head>
 <body>
-  <div class="header">SISMED</div>
+
+<?php include 'cabecalho.php'; ?> 
+
 
   <div class="wrap">
     <div class="card">
@@ -70,6 +78,9 @@
     </div>
   </div>
 
+
+  <?php include 'rodape.php'; ?> 
+  
   <script>
     function cadastrarUsuario(){
       const nome = document.getElementById('nome').value.trim();

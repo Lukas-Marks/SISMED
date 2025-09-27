@@ -1,0 +1,26 @@
+.footer {
+    background-color: #1e64f0;
+    color: #333;
+    padding: 20px 0;
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 14px;
+    border-top: 1px solid #ddd;
+    margin-top: 100px;
+
+  }
+  
+  .footer-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+    color: white;
+  }
+  
+  .footer a {
+    text-decoration: none;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+  }

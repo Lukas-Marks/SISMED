@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Recuperar Senha - SISMED</title>
-    <link rel="stylesheet" href="css/login.css?v=2">
+    <link rel="stylesheet" href="../CSS/login.css">
 </head>
 <body>
     <div class="recuperar-container">
@@ -15,7 +15,7 @@
             <button type="submit">Enviar link</button>
         </form>
 
-        <a href="index.php">← Voltar para o login</a>
+        <a href="../index.php">← Voltar para o login</a>
     </div>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <header>
     <img class="logo" src="../Imagem/Sismed-logo.png" />
     <nav class="desktop-nav">
-    <a href="#">Início</a>
+    <a href="pagina-principal.php">Início</a>
     <a href="#">Pacientes</a>
     <a href="#">Consultas</a>
     <a href="#">Relatórios</a>

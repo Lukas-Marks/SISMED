@@ -32,17 +32,14 @@ body {
   border: 1px solid #ccc;
 }
 
-/* container do botão: abaixo da busca e alinhado à direita,
-   com mesma largura máxima do calendário (centrado na página) */
 .add-container {
   display: flex;
-  justify-content: flex-end; /* botão à direita */
+  justify-content: flex-end; 
   margin: 8px auto 18px;
   width: 90%;
-  max-width: 1100px; /* combina com largura do calendário */
+  max-width: 1100px; 
 }
 
-/* botão azul estilizado */
 #addAgendamento {
   display: inline-flex;
   align-items: center;

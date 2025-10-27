@@ -103,7 +103,6 @@
 
   .btn {
     margin-top:16px;
-    width:100%;
     padding:10px 12px;
     border-radius:6px;
     border: none;
@@ -112,9 +111,18 @@
     font-size:16px;
     cursor:pointer;
     font-weight:600;
+    width: auto;              /* Garante que o botão só ocupe o espaço necessário */
+    white-space: nowrap;      /* Impede quebra de linha no botão */
   }
   .btn:hover{ background: var(--blue-dark); }
 
-  
+  .button-group {
+  display: flex;
+  justify-content: flex-start;   /* Centraliza os botões horizontalmente */
+  gap: 10px;                  /* Espaço entre os botões */
+  margin-top: 20px;           /* Espaço acima do grupo */
+  flex-wrap: wrap;            /* Permite quebrar linha em telas menores */
+}
+
   .mb-14{ margin-bottom:14px; }
   .mb-8{ margin-bottom:8px; }

@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="login-container">
-        <img src="Imagem/Sismed-logo.png" alt="Logo do Sistema" class="logo-image">
+        <img src="../SISMED V3 - Copia (2)/Imagem/Sismed-logo.png" alt="Logo do Sistema" class="logo-image">
         <p class="subtitle">Sistema para Consultórios Médicos</p>
 
          <form method="POST" action="./Pages/login.php">

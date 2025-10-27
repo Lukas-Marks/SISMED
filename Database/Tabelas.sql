@@ -3,6 +3,8 @@
 CREATE TABLE Usuario (
     ID INT PRIMARY KEY AUTO_INCREMENT,
     Nome VARCHAR(100),
+    Usuario VARCHAR(20),
+    Perfil VARCHAR(20),
     Email VARCHAR(100),
     Senha VARCHAR(100),
     Tipo ENUM('Recepcionista', 'Medico', 'ADM')
@@ -78,3 +80,23 @@ CREATE TABLE Prescricao (
     ConsultaID INT,
     FOREIGN KEY (ConsultaID) REFERENCES Consulta(ID)
 );
+
+CREATE TABLE agendamentos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome_completo VARCHAR(255) NOT NULL,
+    cpf VARCHAR(14) NOT NULL,
+    data_nascimento DATE NOT NULL,
+    telefone VARCHAR(20),
+    especialidade VARCHAR(100),
+    medico VARCHAR(100),
+    data_consulta DATE,
+    horario TIME,
+    tipo_consulta VARCHAR(50),
+    observacoes TEXT,
+    status VARCHAR(50) DEFAULT 'Confirmado'
+);
+
+ALTER TABLE usuarios ADD COLUMN especialidade VARCHAR(100) NOT NULL AFTER historico;
+
+ALTER TABLE usuarios ADD COLUMN funcao VARCHAR(100) NOT NULL AFTER historico;
+

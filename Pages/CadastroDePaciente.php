@@ -4,18 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SISMED - Cadastro de Paciente</title>
-  
-  <link rel="stylesheet" href="../CSS/StyleCadastroDePaciente.css">
-  
-      <!-- CSS Padrão das paginas -->
-    <link rel="stylesheet" href="../CSS/mediaquerie.css"/>
-  <link rel="stylesheet" href="../CSS/rodape.css"/>
-  <link rel="stylesheet" href="../CSS/cabecalho.css"/>
-  <link rel="stylesheet" href="../CSS/reset.css"/>
+  <link rel="stylesheet" href="../CSS/Cabecalho.css">
+  <link rel="stylesheet" href="StyleCadastroDePaciente.css">
 </head>
 <body>
 
-<?php include 'cabecalho.php'; ?> 
+<?php include 'cabecalho.php'; ?>
 
   <div class="container">
     <h2>Cadastro de Paciente</h2>
@@ -68,8 +62,6 @@
       <button class="btn-primary">Salvar</button>
     </div>
   </div>
-
-  <?php include 'rodape.php'; ?> 
 
 </body>
 </html>

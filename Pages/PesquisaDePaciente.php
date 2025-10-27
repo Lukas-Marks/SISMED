@@ -4,17 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SISMED - Pesquisa de Pacientes</title>
-  <link rel="stylesheet" href="../CSS/StylePesquisaDePaciente.css">
-
-      <!-- CSS Padrão das paginas -->
-  <link rel="stylesheet" href="../CSS/mediaquerie.css"/>
-  <link rel="stylesheet" href="../CSS/rodape.css"/>
-  <link rel="stylesheet" href="../CSS/cabecalho.css"/>
-  <link rel="stylesheet" href="../CSS/reset.css"/>
+  <link rel="stylesheet" href="StylePesquisaDePaciente.css">
+  <link rel="stylesheet" href="../CSS/Cabecalho.css">
 </head>
 <body>
 
-<?php include 'cabecalho.php'; ?> 
+<?php include 'cabecalho.php'; ?>
+
   <div class="container">
     <h2>Pesquisa de Pacientes</h2>
 
@@ -40,7 +36,7 @@
     <div class="results">
       <div class="results-header">
         <h2>Resultados da busca</h2>
-        <a href="CadastroDePaciente.html">Novo Cadastro</a>
+        <a href="CadastroDePaciente.php">Novo Cadastro</a>
       </div>
 
       <table>
@@ -59,17 +55,12 @@
       </table>
     </div>
   </div>
-
-<script> 
-
-function limpar() {
+ <script>
+    function limpar() {
       document.querySelectorAll("input").forEach(input => input.value = "");
     }
-
-</script> 
-  
-  <?php include 'rodape.php'; ?> 
-
+  </script>
 
 </body>
+
 </html>

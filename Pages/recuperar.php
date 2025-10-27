@@ -10,7 +10,7 @@
         <h1>Recuperar Senha</h1>
         <p class="descricao">Digite seu e-mail cadastrado para receber o link de redefinição.</p>
 
-        <form method="POST" action="processa_recuperacao.php">
+        <form method="POST" action="../Esqueci_senha/processa_recuperacao.php">
             <input type="email" name="email" placeholder="Seu e-mail" required>
             <button type="submit">Enviar link</button>
         </form>

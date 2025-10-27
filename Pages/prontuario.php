@@ -1,0 +1,244 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sismed - Histórico do Paciente</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+<link rel="stylesheet" href="../CSS/Cabecalho.css">
+<style>
+    body {
+        background-color: #f3f6fa;
+        font-family: "Segoe UI", sans-serif;
+    }
+
+    header {
+        background-color: #005db9;
+        color: #fff;
+        padding: 12px 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header .title {
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    header .title i {
+        font-size: 24px;
+        margin-right: 10px;
+    }
+
+    .container-card {
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 25px;
+        margin: 40px auto;
+        width: 90%;
+        max-width: 900px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .breadcrumb {
+        font-size: 14px;
+        color: #6c757d;
+        margin-bottom: 10px;
+    }
+
+    .btn-adicionar {
+        background-color: #1bb34a;
+        color: white;
+        border: none;
+        font-weight: 600;
+        border-radius: 6px;
+    }
+
+    .btn-adicionar:hover {
+        background-color: #1bb34a;
+    }
+
+    .perfil {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        align-items: center;
+        border: 1px solid #e0e0e0;
+        border-radius: 10px;
+        padding: 15px;
+        margin-top: 15px;
+    }
+
+    .perfil img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        object-fit: cover;
+        background-color: #cdd5df;
+    }
+
+    .dados {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+        margin-top: 10px;
+    }
+
+    .dados div {
+        background-color: #f1f3f5;
+        padding: 6px 12px;
+        border-radius: 6px;
+        font-size: 14px;
+    }
+
+    .tabs {
+        border-bottom: 2px solid #dee2e6;
+        margin-top: 25px;
+    }
+
+    .tab {
+        display: inline-block;
+        padding: 10px 18px;
+        cursor: pointer;
+        font-weight: 600;
+        color: #555;
+        border-bottom: 3px solid transparent;
+    }
+
+    .tab.active {
+        color: #007bff;
+        border-bottom: 3px solid #007bff;
+    }
+
+    .conteudo {
+        margin-top: 20px;
+    }
+
+    .campo {
+        height: 10px;
+        border-radius: 5px;
+        background: #e9edf2;
+        margin: 10px 0;
+        width: 95%;
+    }
+</style>
+</head>
+<body>
+
+    <?php include 'cabecalho.php'; ?>
+
+<div class="container-card">
+    <div class="d-flex justify-content-between align-items-center flex-wrap">
+        <div>
+            <h4 class="fw-bold mb-1">Histórico do paciente</h4>
+            
+            <div class="breadcrumb">Atendimentos • Paciente • Étore Arantes</div>
+        </div>
+        <button class="btn btn-adicionar" onclick="adicionarDocumento()">
+            <i class="bi bi-plus-lg"></i> Adicionar Documento
+        </button>
+    </div>
+
+    
+    <div class="perfil mt-3">
+        
+        <img src=c:\xampp3\htdocs\sismed\imagens\design-de-avatar-de-pessoa_24877-38131.jpg alt="Foto do paciente" id="fotoPaciente">
+        <div>
+            <h5 class="fw-bold mb-1" id="nomePaciente">Étore Arantes</h5>
+            <p class="text-muted mb-2" id="codigoPaciente">S40S · 2015-72</p>
+            <div class="dados">
+                <div><i class="bi bi-file-earmark-medical"></i> Atestado: <b>2</b></div>
+                <div><i class="bi bi-capsule"></i> Receituário: <b>0</b></div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="tabs">
+        <span class="tab active" onclick="mostrarTab('evolucao', event)">Evolução Médica</span>
+        <span class="tab" onclick="mostrarTab('prescricoes', event)">Prescrições</span>
+        <span class="tab" onclick="mostrarTab('exames', event)">Exames</span>
+        <span class="tab" onclick="mostrarTab('documentos', event)">Documentos</span>
+    </div>
+
+    
+    <div class="conteudo" id="conteudo">
+        <h5>Anamnese</h5><div class="campo"></div>
+        <h5>Exames Físicos</h5><div class="campo"></div>
+        <h5>Solicitações</h5><div class="campo"></div>
+    </div>
+</div>
+
+<script>
+function mostrarTab(tab, event) {
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    event.target.classList.add('active');
+    const conteudo = document.getElementById('conteudo');
+
+    if (tab === 'evolucao') {
+        conteudo.innerHTML = `
+            <h5>Anamnese</h5>
+            <textarea id="anamnese" class="form-control mb-3" rows="3" placeholder="Digite a anamnese do paciente"></textarea>
+
+            <h5>Exames Físicos</h5>
+            <textarea id="exames_fisicos" class="form-control mb-3" rows="3" placeholder="Descreva os exames físicos"></textarea>
+
+            <h5>Solicitações</h5>
+            <textarea id="solicitacoes" class="form-control mb-3" rows="3" placeholder="Digite as solicitações médicas"></textarea>
+
+            <div class="text-end mt-3">
+                <button class="btn btn-success" onclick="salvarAlteracoes()">
+                    <i class="bi bi-save"></i> Salvar Alterações
+                </button>
+            </div>
+        `;
+    } else if (tab === 'prescricoes') {
+        conteudo.innerHTML = `<p><i class='bi bi-capsule'></i> Nenhuma prescrição registrada.</p>`;
+    } else if (tab === 'exames') {
+        conteudo.innerHTML = `<p><i class='bi bi-clipboard2-pulse'></i> Nenhum exame disponível.</p>`;
+    } else {
+        conteudo.innerHTML = `<p><i class='bi bi-folder2-open'></i> Nenhum documento adicionado.</p>`;
+    }
+}
+
+async function salvarAlteracoes() {
+    const paciente_id = 1; // Ajuste se usar ID dinâmico
+    const anamnese = document.getElementById('anamnese').value.trim();
+    const exames_fisicos = document.getElementById('exames_fisicos').value.trim();
+    const solicitacoes = document.getElementById('solicitacoes').value.trim();
+
+    if (!anamnese && !exames_fisicos && !solicitacoes) {
+        alert('Preencha ao menos um campo para salvar.');
+        return;
+    }
+
+    const dados = new FormData();
+    dados.append('paciente_id', paciente_id);
+    dados.append('anamnese', anamnese);
+    dados.append('exames_fisicos', exames_fisicos);
+    dados.append('solicitacoes', solicitacoes);
+
+    try {
+        const resposta = await fetch('atualizar_evolucao.php', {
+            method: 'POST',
+            body: dados
+        });
+
+        const resultado = await resposta.json();
+
+        if (resultado.sucesso) {
+            alert('Alterações salvas com sucesso!');
+        } else {
+            alert('Erro ao salvar as alterações: ' + (resultado.erro || 'Desconhecido.'));
+        }
+    } catch (e) {
+        alert('Erro de conexão ao salvar as alterações.');
+    }
+}
+</script>

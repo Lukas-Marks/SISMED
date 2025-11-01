@@ -20,9 +20,11 @@
     <div class="card">
       <h2>Editar Cadastro</h2>
 
+      <form method="post" action="procurarID.php">
       <label for="matricula">ID ou matrícula:</label>
       <input type="text" id="matricula">
       <button class="btn" onclick="buscarPaciente()">Buscar</button>
+      </form>
      </div>
   </div>
 

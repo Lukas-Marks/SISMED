@@ -4,7 +4,8 @@ require_once 'verifica_acesso.php';
 // Bloqueia o acesso para médicos
 bloquear_acesso_para(['Medico']);
 
-include 'Conectar.php'; 
+include 'Conectar.php';
+include 'cabecalho.php'; 
 ?>
 
 <!DOCTYPE html>
@@ -12,6 +13,8 @@ include 'Conectar.php';
 <head>
   <meta charset="UTF-8">
   <title>Agendamento de Consulta</title>
+  <link rel="stylesheet" href="../CSS/Cabecalho.css">
+  <link rel="stylesheet" href="../CSS/rodape.css">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -172,5 +175,7 @@ include 'Conectar.php';
         });
     }
   </script>
+
+  <?php include 'rodape.php'; ?>
 </body>
 </html>

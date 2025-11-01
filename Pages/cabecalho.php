@@ -30,7 +30,6 @@ $funcao = $_SESSION['funcao'];
     <a href="PesquisaDePaciente.php">Pesquisar Paciente</a>
     <a href="CadastroDePaciente.php">Cadastro Paciente</a>
     <a href="cadastro_usuario.php">Cadastrar Usuario</a>  
-    <a href="editar_cadastro.php">Editar Cadastro</a>
 
 <?php endif; ?>
 
@@ -47,7 +46,6 @@ $funcao = $_SESSION['funcao'];
     <a href="PesquisaDePaciente.php">Pesquisar Paciente</a>
     <a href="CadastroDePaciente.php">Cadastro Paciente</a>
     <a href="cadastro_usuario.php">Cadastrar Usuario</a>
-    <a href="editar_cadastro.php">Editar Cadastro</a>
 
     <?php endif; ?>
     </nav>

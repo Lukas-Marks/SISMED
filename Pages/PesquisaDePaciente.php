@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SISMED - Pesquisa de Pacientes</title>
   <link rel="stylesheet" href="StylePesquisaDePaciente.css">
-  <link rel="stylesheet" href="../CSS/Cabecalho.css">
+  <link rel="stylesheet" href="../CSS/cabecalho.css">
 </head>
 <body>
 
@@ -68,9 +68,19 @@ include 'consultarPaciente.php';
               echo '<td>'.$pacientes[$i]['data_nascimento'].'</td>';
               echo '<td>'.$pacientes[$i]['telefone'].'</td>';
               echo '<td>'.$pacientes[$i]['email'].'</td>';
-              echo '<td>'.'Button'.'</td>';
+              
+              // Botão que redireciona para a página de prontuário
+              echo '<td>
+                      <form method="GET" action="prontuario.php">
+                        <input type="hidden" name="id" value="'.$pacientes[$i]['id'].'">
+                        <button type="submit">Ver Prontuário</button>
+                      </form>
+                    </td>';
+              
               echo '</tr>';
-              }   }
+            }
+          }
+
 
           ?>          
           

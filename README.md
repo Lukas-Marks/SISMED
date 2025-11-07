@@ -1,27 +1,43 @@
-# 🏥 SISMED - Sistema Integrado de Gestão para Consultórios Médicos
+# 🏥 SISMED – Sistema Integrado de Gestão para Consultórios Médicos
 
-## 📖 Visão do Projeto
-O **SISMED** é um sistema desenvolvido para auxiliar na gestão de consultórios médicos, com foco na organização de agendamentos, prontuários eletrônicos, controle financeiro e relatórios gerenciais.  
-O objetivo é facilitar o dia a dia dos profissionais da saúde e aumentar a eficiência do atendimento aos pacientes.
+SISMED é uma aplicação web desenvolvida para automatizar e organizar os processos internos de clínicas e consultórios médicos. O sistema permite o gerenciamento de pacientes, agendamento de consultas, registro de prontuários eletrônicos e geração de relatórios administrativos, tudo em uma interface moderna e responsiva.
 
 ---
 
-## 🎯 Objetivos
-- Organizar e agilizar os agendamentos de consultas e exames  
-- Centralizar os dados dos pacientes em um prontuário eletrônico  
-- Otimizar a gestão financeira do consultório  
-- Fornecer relatórios médicos, operacionais e gerenciais  
+## 🚀 Funcionalidades
+
+- ✅ Cadastro de pacientes e usuários
+- 📅 Agendamento, alteração e cancelamento de consultas
+- 🗂️ Registro de prontuário eletrônico com evolução clínica
+- 💊 Prescrição de medicamentos
+- 📊 Geração de relatórios gerenciais
+- 🔐 Controle de acesso por tipo de usuário (ADM, médico, recepcionista)
+- 📱 Interface responsiva para desktop e mobile
 
 ---
 
-## 🚀 Como Rodar o Projeto
+## 🧰 Tecnologias Utilizadas
 
-### Pré-requisitos
-- [PHP](https://nodejs.org/) >= 7  
-- [MySQL](https://www.mysql.com/) >= 8  
-- [Git](https://git-scm.com/)  
+- **Front-end:** HTML, CSS, JavaScript
+- **Back-end:** PHP
+- **Banco de dados:** MySQL
+- **Controle de versão:** Git e GitHub
+- **Modelagem de dados:** BRModelo
 
+---
 
+## 👨‍💻 Equipe de Desenvolvimento
 
-TCC ETEC GRUPO 05 <br />
-© Todos os direitos reservados
+- **Lucas Marques Gomes** – Scrum Master, Product Owner, Integração
+- **Jefferson Mangueira José** – Back-End e Banco de Dados
+- **Scarlat Torres da Silva** – Front-End
+- **Cintia Vieira Pomponio** – Front-End
+- **Jorge Henrique Rodrigues da Silva** – Back-End e Integração
+
+---
+
+## 📦 Instalação
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/SISMED.git

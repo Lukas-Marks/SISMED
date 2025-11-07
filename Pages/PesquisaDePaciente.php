@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SISMED - Pesquisa de Pacientes</title>
   <link rel="stylesheet" href="StylePesquisaDePaciente.css">
-  <link rel="stylesheet" href="../CSS/cabecalho.css">
+  <link rel="stylesheet" href="../CSS/rodape.css" />
+  <link rel="stylesheet" href="../CSS/cabecalho.css" />
+  <link rel="stylesheet" href="../CSS/reset.css" />
 </head>
 <body>
 
@@ -60,7 +62,6 @@ include 'consultarPaciente.php';
           <tbody id="resultados">
 
           <?php 
-
           if ($filtrosValidos == true) {
             for ($i = 0; $i < count($pacientes); $i++) {
               echo '<tr>';
@@ -81,6 +82,8 @@ include 'consultarPaciente.php';
             }
           }
 
+         
+                   
 
           ?>          
           
@@ -106,7 +109,7 @@ include 'consultarPaciente.php';
   });
 
   </script>
-
+<?php include('rodape.php')?>
 </body>
 
 </html>

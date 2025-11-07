@@ -31,6 +31,42 @@ $historico = $_POST['historico'];
 // Monta o endereço completo (opcional)
 $endereco = "$rua, $numero - $bairro, $cidade - $estado, $cep";
 
+// Função para verificar duplicidade
+function existeDuplicado($conn, $campo, $valor) {
+    $sql = "SELECT id FROM pacientes WHERE $campo = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("s", $valor);
+    $stmt->execute();
+    $stmt->store_result();
+    $existe = $stmt->num_rows > 0;
+    $stmt->close();
+    return $existe;
+}
+
+// Verifica se email já existe
+if (existeDuplicado($conn, 'email', $email)) {
+    echo "Erro: Este email já está cadastrado.";
+    echo "<script>
+        setTimeout(function() {
+            window.location.href = 'pagina-principal.php';
+        }, 3000);
+    </script>";
+    $conn->close();
+    exit;
+}
+
+// Verifica se CPF já existe
+if (existeDuplicado($conn, 'cpf', $cpf)) {
+    echo "Erro: Este CPF já está cadastrado.";
+    echo "<script>
+        setTimeout(function() {
+            window.location.href = 'pagina-principal.php';
+        }, 3000);
+    </script>";
+    $conn->close();
+    exit;
+}
+
 // Prepara e executa a inserção
 $sql = "INSERT INTO pacientes (
     nome, data_nascimento, cpf, altura, peso, telefone, endereco, email,
@@ -46,19 +82,18 @@ $stmt->bind_param("sssddssssssssss",
 if ($stmt->execute()) {
     echo "Paciente cadastrado com sucesso!";
     echo "<script>
-  setTimeout(function() {
-    window.location.href = 'pagina-principal.php';
-  }, 2000); // 2000 milissegundos = 3 segundos
-</script>";
+      setTimeout(function() {
+        window.location.href = 'pagina-principal.php';
+      }, 2000);
+    </script>";
 
 } else {
     echo "Erro ao cadastrar: " . $stmt->error;
     echo "<script>
-  setTimeout(function() {
-    window.location.href = 'pagina-principal.php';
-  }, 2000); // 2000 milissegundos = 2 segundos
-</script>";
-
+      setTimeout(function() {
+        window.location.href = 'pagina-principal.php';
+      }, 2000);
+    </script>";
 }
 
 $stmt->close();

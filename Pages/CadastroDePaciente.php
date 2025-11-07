@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="../CSS/Cabecalho.css">
   <link rel="stylesheet" href="StyleCadastroDePaciente.css">
   <link rel="stylesheet" href="../CSS/rodape.css">
+  <link rel="stylesheet" href="../CSS/reset.css">
+  
 </head>
 <body>
 

@@ -26,13 +26,24 @@ include 'Conectar.php'; ?>
      flex-wrap: wrap; /* adiciona quebra em telas menores */
   
     }
-    #calendar {
-  width: 1000px;
+   
+
+  #calendar {
+  width: 100%; /* ocupa toda a largura disponível */
+  max-width: 1400px; /* limite máximo para telas grandes */
   background: white;
-  padding: 10px;
+  padding: 15px;
   border-radius: 12px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin: 0 auto; /* centraliza o calendário */
 }
+
+
+
+
+
+
+
 
 /* Força o texto do evento a aparecer completo */
 .fc .fc-daygrid-event .fc-event-title {

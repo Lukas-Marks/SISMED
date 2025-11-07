@@ -5,6 +5,8 @@
   
 }
 
+
+
 .agendamentos-table th:first-child {
   width: 80px;
 }
@@ -13,6 +15,8 @@
 .agendamentos-table {
   width: 100%;
   border-collapse: collapse;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .agendamentos-table th,
@@ -36,14 +40,15 @@
 }
 
 
-
-
-
-
 body {
-    margin: 0;
+    margin-bottom: 120px;
     font-family: Arial, sans-serif;
     background-color: #f5f7fb;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
   }
 
   /* Container */
@@ -102,6 +107,7 @@ body {
     background: white;
     border-radius: 12px;
     overflow: hidden;
+   
   }
 
   /*th, td {

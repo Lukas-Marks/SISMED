@@ -29,7 +29,8 @@ $dataSelecionada = isset($_GET['data']) ? $_GET['data'] : date('Y-m-d');
 
 $horarios = ["07:00", "08:00", "09:00", "10:00", "11:00", "14:00", "15:00", "16:00", "17:00", "18:00"];
 
-// Consulta para contar pendências (agendamentos com status Cancelado)
+
+// Consulta para contar agendamentos pendentes (Cancelado)
 $stmtPendencias = $conn->prepare("SELECT COUNT(*) AS total_pendencias FROM agendamentos WHERE status = ?");
 $statusCancelado = 'Cancelado';
 $stmtPendencias->bind_param("s", $statusCancelado);
@@ -39,10 +40,20 @@ $rowPendencias = $resultPendencias->fetch_assoc();
 $totalPendencias = $rowPendencias['total_pendencias'];
 $stmtPendencias->close();
 
-// Consulta para contar pacientes ativos (exemplo, se tiver algum campo para isso, aqui só exemplo fixo)
-$totalPacientesAtivos = 245; // Altere conforme sua tabela
+// Consulta para contar pacientes agendados (status = "Agendado")
+$stmtAgendados = $conn->prepare("SELECT COUNT(*) AS total_agendados FROM agendamentos WHERE status = ?");
+$statusAgendado = 'Agendado';
+$stmtAgendados->bind_param("s", $statusAgendado);
+$stmtAgendados->execute();
+$resultAgendados = $stmtAgendados->get_result();
+$rowAgendados = $resultAgendados->fetch_assoc();
+$totalAgendados = $rowAgendados['total_agendados'];
+$stmtAgendados->close();
 
-// Consulta para contar consultas do dia (exemplo, também precisa ajustar conforme sua tabela)
+// Total de pacientes ativos = pendentes + agendados
+$totalPacientesAtivos = $totalPendencias + $totalAgendados;
+
+// Consulta para contar consultas do dia
 $stmtConsultasHoje = $conn->prepare("SELECT COUNT(*) AS total_consultas FROM consultas WHERE DATE(data_consulta) = ?");
 $stmtConsultasHoje->bind_param("s", $dataSelecionada);
 $stmtConsultasHoje->execute();
@@ -50,8 +61,10 @@ $resultConsultasHoje = $stmtConsultasHoje->get_result();
 $rowConsultasHoje = $resultConsultasHoje->fetch_assoc();
 $totalConsultasHoje = $rowConsultasHoje['total_consultas'];
 $stmtConsultasHoje->close();
-
 ?>
+
+
+
 
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -72,7 +85,7 @@ $stmtConsultasHoje->close();
 <div class="container">
 
   <div class="welcome">
-    <h2>Bem-vindo(a), <?php echo htmlspecialchars($usuario); ?> 👩‍⚕️</h2>
+    <h2>Bem-vindo(a), <?php echo htmlspecialchars($usuario); ?> 🩺</h2>
     <p>Aqui está um resumo do consultório para hoje.</p>
   </div>
 
@@ -86,7 +99,7 @@ $stmtConsultasHoje->close();
       <p><?php echo $totalConsultasHoje; ?></p>
     </div>
     <div class="card orange">
-      <h3>Pendências</h3>
+      <h3>Cancelados</h3>
       <p><?php echo $totalPendencias; ?></p>
     </div>
   </div>
@@ -147,7 +160,7 @@ $stmtConsultasHoje->close();
                 $cor = match($status) {
                     'Confirmado' => '#28a745',
                     'Cancelado'  => '#ffc107',
-                    default      => '#6c757d',
+                    default      => 'rgba(214, 14, 0, 1)',
                 };
               ?>
                 <div style="color: <?php echo $cor; ?>; font-weight: bold;">
@@ -185,13 +198,13 @@ $stmtConsultasHoje->close();
 </div>
 
 <?php include 'rodape.php'; ?>
-
+<!-- 
 <script src="../JS/jquery.js"></script>
 <script>
   $(".imagem-ham").click(function() {
     $(".nav-mobile").slideToggle();
   });
-</script>
+</script> -->
 
 </body>
 </html>

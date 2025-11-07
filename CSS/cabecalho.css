@@ -72,7 +72,7 @@
 
 /* Media Querie */
 
-@media screen and (max-width: 841px){
+@media screen and (max-width: 1200px){
     .cards{
       flex-wrap: wrap;
     }

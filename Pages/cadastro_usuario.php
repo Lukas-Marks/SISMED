@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <link rel="stylesheet" href="../CSS/cadastro_usuario.css?v=1.2">
   <link rel="stylesheet" href="../CSS/Cabecalho.css">
+  <link rel="stylesheet" href="../CSS/rodape.css">
+  <link rel="stylesheet" href="../CSS/reset.css">
+
 </head>
 <body>
 
@@ -115,5 +118,6 @@
     // Executa ao carregar a página (caso o navegador mantenha os dados)
     window.onload = mostrarEspecialidade;
   </script>
+<?php include 'rodape.php'; ?>
 </body>
 </html>

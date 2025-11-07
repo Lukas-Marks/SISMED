@@ -28,11 +28,11 @@ SISMED é uma aplicação web desenvolvida para automatizar e organizar os proce
 
 ## 👨‍💻 Equipe de Desenvolvimento
 
-- **Lucas Marques Gomes** – Scrum Master, Product Owner, Integração
-- **Jefferson Mangueira José** – Back-End e Banco de Dados
-- **Scarlat Torres da Silva** – Front-End
-- **Cintia Vieira Pomponio** – Front-End
-- **Jorge Henrique Rodrigues da Silva** – Back-End e Integração
+- **Lucas Marques Gomes** – Scrum Master, Product Owner, Integração do Front-End, Back-End e Banco de Dados
+- **Jefferson Mangueira José** – Front-End, Back-End e Banco de Dados
+- **Scarlat Torres da Silva** – Front-End, Back-End e Banco de Dados
+- **Cintia Vieira Pomponio** – Front-End, Back-End e Banco de Dados
+- **Jorge Henrique Rodrigues da Silva** – Front-End, Back-End e Banco de Dados
 
 ---
 

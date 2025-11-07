@@ -1,0 +1,151 @@
+/* ----- Estilo base ----- */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f6fc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* ----- Caixa de login ----- */
+.login-container {
+    background: #fff;
+    padding: 50px;
+    border-radius: 12px;
+    width: 350px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.logo {
+    color: #1d2125;
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    width: 90%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    margin: 5px 0 15px;
+}
+
+.link {
+    text-decoration: none;
+    color: #115cc2;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 12px;
+    background-color: #1571c8;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #115cc2;
+}
+
+footer {
+    margin-top: 15px;
+    font-size: 12px;
+    color: #666;
+}
+
+/* ----- Caixa Recuperar Senha ----- */
+.recuperar-container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    width: 350px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    text-align: center;
+    border: 1px solid #e0e0e0;
+}
+
+.recuperar-container h1 {
+    color: #1d2125;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.recuperar-container .descricao {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.recuperar-container input[type="email"] {
+    width: 90%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.recuperar-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #1571c8;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.recuperar-container button:hover {
+    background-color: #115cc2;
+}
+
+.recuperar-container a {
+    display: block;
+    margin-top: 15px;
+    color: #115cc2;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.recuperar-container a:hover {
+    text-decoration: underline;
+}
+
+.msg {
+    margin-top: 15px;
+    font-size: 14px;
+    color: green;
+}
+
+.logo-image{
+    width: 200px;
+    height: 200px;
+    filter: invert(1);
+    cursor: pointer;
+    scale: 1.5;
+}

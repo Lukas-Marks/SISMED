@@ -1,0 +1,94 @@
+:root {
+  --blue: #1976d2;
+  --blue-dark: #125a9e;
+  --card-bg: #ffffff;
+  --panel-bg: #fbfbfb;
+  --muted: #6b6b6b;
+  --border: #eef0f2;
+  --shadow: 0 8px 18px rgba(20,30,40,0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: #f0f2f5;
+  color: #222;
+}
+
+.container {
+  width: 80%;
+  max-width: 900px;
+  margin: 40px auto;
+  background: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  padding: 24px;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 24px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 24px;
+}
+
+th, td {
+  padding: 12px 16px;
+  border: 1px solid var(--border);
+  text-align: left;
+  font-size: 14px;
+}
+
+th {
+  background-color: var(--blue);
+  color: white;
+  font-weight: 600;
+}
+
+tr:nth-child(even) {
+  background-color: var(--panel-bg);
+}
+
+a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a.edit-btn {
+  color: var(--blue);
+  margin-right: 12px;
+}
+
+a.delete-btn {
+  color: #d32f2f;
+}
+
+.btn-voltar {
+  display: inline-block;
+  background-color: var(--blue);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn-voltar:hover {
+  background-color: var(--blue-dark);
+}

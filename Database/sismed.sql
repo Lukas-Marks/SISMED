@@ -2,7 +2,8 @@
 --
 -- Banco de dados: `sismed`
 --
-
+CREATE DATABASE IF NOT EXISTS sismed;
+USE sismed;
 -- --------------------------------------------------------
 
 --

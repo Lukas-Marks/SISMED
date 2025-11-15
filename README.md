@@ -40,4 +40,4 @@ SISMED é uma aplicação web desenvolvida para automatizar e organizar os proce
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/SISMED.git
+   git clone https://github.com/Lukas-Marks/SISMED.git

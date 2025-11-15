@@ -40,6 +40,7 @@ include 'cabecalho.php';
       <option value="Cardiologia">Cardiologia</option>
       <option value="Pediatria">Pediatria</option>
       <option value="Clínico Geral">Clínico Geral</option>
+      <option value="Dermatologia">Dermatologia</option>
     </select>
 
     <label>Médico desejado (opcional):</label>
@@ -75,13 +76,40 @@ include 'cabecalho.php';
   </form>
 </div>
 
-<!-- JS externo
-<script src="../JS/jquery.js"></script>
+<!-- SCRIPT PARA CARREGAR MÉDICOS DINAMICAMENTE -->
 <script>
-  $(".imagem-ham").click(function() {
-    $(".nav-mobile").slideToggle();
-  });
-</script> -->
+function carregarMedicosPorEspecialidade() {
+    const especialidade = document.getElementById('especialidade').value;
+    const selectMedico = document.getElementById('medico');
+
+    if (!especialidade) {
+        selectMedico.innerHTML = '<option value="">-- Selecione a especialidade primeiro --</option>';
+        return;
+    }
+
+    fetch(`buscar_medicos.php?especialidade=${encodeURIComponent(especialidade)}`)
+        .then(response => response.json())
+        .then(data => {
+            selectMedico.innerHTML = '<option value="">-- Selecione o Médico --</option>';
+
+            if (data.length === 0) {
+                const option = document.createElement('option');
+                option.value = '';
+                option.textContent = 'Nenhum médico disponível';
+                selectMedico.appendChild(option);
+            } else {
+                data.forEach(medico => {
+                    const option = document.createElement('option');
+                    option.value = medico.id;
+                    option.textContent = medico.nome;
+                    selectMedico.appendChild(option);
+                });
+            }
+        })
+        .catch(err => console.error('Erro ao buscar médicos:', err));
+}
+</script>
+
 <?php include 'rodape.php'; ?>
 </body>
 </html>

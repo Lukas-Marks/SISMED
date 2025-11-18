@@ -24,6 +24,6 @@
         </form>
 
         <footer>© 2025 SISMED - Todos os direitos reservados</footer>
-    </div>
+    </div> <!-- login-container -->
 </body>
 </html>

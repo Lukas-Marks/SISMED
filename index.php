@@ -21,7 +21,7 @@
             </div>
 
             <button type="submit" class="btn-primary">Entrar</button>
-        </form>
+        </form> <!-- login form -->
 
         <footer>© 2025 SISMED - Todos os direitos reservados</footer>
     </div> <!-- login-container -->

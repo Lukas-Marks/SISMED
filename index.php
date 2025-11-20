@@ -18,7 +18,7 @@
             <div class="options">
                 <label><input type="checkbox" name="lembrar"> Lembrar-me</label>
                 <a href="Pages/recuperar.php" class="link">Esqueci a senha</a>
-            </div>
+            </div> <!-- options -->
 
             <button type="submit" class="btn-primary">Entrar</button>
         </form> <!-- login form -->

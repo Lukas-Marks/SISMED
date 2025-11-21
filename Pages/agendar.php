@@ -73,7 +73,7 @@ include 'cabecalho.php';
       <button type="button" style="background-color: #007bff; color: white;" onclick="window.location.href='../Pages/pagina-principal.php'">Voltar</button>
     </div>
 
-  </form>
+  </form> <!-- form -->
 </div>
 
 <!-- SCRIPT PARA CARREGAR MÉDICOS DINAMICAMENTE -->
